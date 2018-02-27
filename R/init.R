@@ -44,7 +44,7 @@
 #' @family TurtleGraphics
 #' @rdname turtle_init
 #' @export
-turtle_init <- function(width=100, height=100, mode=c('error', 'clip', 'cycle'))
+turtle_init <- function(width=100, height=100, mode=c('error', 'clip', 'cycle'), pause=.1)
 {
    stopifnot(is.numeric(width), length(width) == 1, is.finite(width), width > 0)
    stopifnot(is.numeric(height), length(height) == 1, is.finite(height), height > 0)
@@ -53,7 +53,8 @@ turtle_init <- function(width=100, height=100, mode=c('error', 'clip', 'cycle'))
    assign(envir=.turtle_data, "mode",     mode)
    assign(envir=.turtle_data, "width",    width)
    assign(envir=.turtle_data, "height",   height)
-
+   assign(envir=.turtle_data, "pause",    pause)
+   
    .turtle_set_default_params()
 
 

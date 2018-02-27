@@ -104,6 +104,8 @@
    if (get("visible", envir=.turtle_data)) {
       .turtle_undraw()
       .turtle_draw()
+      pause <- get("pause", envir=.turtle_data)
+      Sys.sleep(pause)
    }
    invisible(NULL)
 }
