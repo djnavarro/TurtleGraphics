@@ -94,6 +94,11 @@
       default.units='native',
       gp = gp2,
       name = "turtle_body")
+   
+   # pause 
+   pause <- get("pause", envir=.turtle_data)
+   Sys.sleep(pause)
+   
    invisible(NULL)
 }
 
@@ -104,8 +109,6 @@
    if (get("visible", envir=.turtle_data)) {
       .turtle_undraw()
       .turtle_draw()
-      pause <- get("pause", envir=.turtle_data)
-      Sys.sleep(pause)
    }
    invisible(NULL)
 }
