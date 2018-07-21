@@ -30,11 +30,14 @@
 # This function shall not be exported:
 .turtle_undraw <- function()
 {
-   grid.remove("turtle_head")
-   grid.remove("turtle_body")
-   grid.remove("turtle_leg1")
-   grid.remove("turtle_leg2")
-   grid.remove("turtle_leg3")
+   # note -- the original did not specify redraw = FALSE
+   # and the graphics device was rendering each of the
+   # intermediate steps. [Danielle Navarro]
+   grid.remove("turtle_head", redraw = FALSE)
+   grid.remove("turtle_body", redraw = FALSE)
+   grid.remove("turtle_leg1", redraw = FALSE)
+   grid.remove("turtle_leg2", redraw = FALSE)
+   grid.remove("turtle_leg3", redraw = FALSE)
    grid.remove("turtle_leg4")
    invisible(NULL)
 }
@@ -66,7 +69,6 @@
       default.units='native',
       gp = gp1,
       r=0.01*scale,
-      draw = FALSE,
       name = "turtle_leg1")
    grid.circle(
       x + tmp * sin(angle - pi/3),
