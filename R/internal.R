@@ -66,6 +66,7 @@
       default.units='native',
       gp = gp1,
       r=0.01*scale,
+      draw = FALSE,
       name = "turtle_leg1")
    grid.circle(
       x + tmp * sin(angle - pi/3),

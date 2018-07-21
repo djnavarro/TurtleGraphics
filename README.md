@@ -17,7 +17,6 @@ Authors:
 * Natalia Potocka
 * Barbara Żogała-Siudem
 
-
 ![Koch's curve](http://www.gagolewski.com/img/TurtleGraphics_koch.png "TurtleGraphics")
 
 ![A tree](http://www.gagolewski.com/img/TurtleGraphics_tree.png "TurtleGraphics")
